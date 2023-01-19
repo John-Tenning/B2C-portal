@@ -1,5 +1,8 @@
 import React from "react";
 import logo from "../assets/logo.jpg";
+import food1 from "../assets/food1.jpeg"
+import food2 from "../assets/food2.jpeg"
+import food3 from "../assets/food3.jpeg"
 
 function HomePage() {
   return (
@@ -15,35 +18,35 @@ function HomePage() {
                 <div className="ml-10 flex items-baseline space-x-1">
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-yellow block  px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue block  px-3 py-2 rounded-md text-base font-medium"
                   >
                     Home
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Services
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Explore
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue px-3 py-2 rounded-md text-sm font-medium"
                   >
                     About
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Contact
                   </a>
@@ -156,68 +159,65 @@ function HomePage() {
       <main>
         <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
           <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full" src={logo} alt="Mountain"></img>
+            <img class="w-full h-50" src={food1} alt="Mountain"></img>
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Mountain</div>
+              <div class="font-bold text-xl mb-2">Meenakshi Mess</div>
               <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                Located near PSG College of Technology, our mess has to
+                be the favourite food attraction of college going Students. 
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
+                #mess_food
               </span>
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
+                #hostel
               </span>
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
+                #chicken
               </span>
             </div>
           </div>
           <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full" src={logo} alt="River"></img>
+            <img class="w-full h-50" src={food2} alt="River"></img>
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">River</div>
+              <div class="font-bold text-xl mb-2">Amman Mess</div>
               <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                Amman Mess is the second crowded food place
+                next to Meenakshi Mess.
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
+                #food
               </span>
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
+                #gilma_biryani
               </span>
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #summer
+                #amman
               </span>
             </div>
           </div>
           <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full" src={logo} alt="River"></img>
+            <img class="w-full h-50" src={food3} alt="River"></img>
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">River</div>
+              <div class="font-bold text-xl mb-2">Kalaki</div>
               <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                Popular among students by conducting fun activities.
+                10% offer for students comming in college ID.
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
+                #Kalaki
               </span>
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
+                #juicy_grill
               </span>
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #summer
+                #offer
               </span>
             </div>
           </div>
