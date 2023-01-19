@@ -1,54 +1,64 @@
 import React from "react";
+import logo from "../assets/logo.jpg";
 
 function HomePage() {
   return (
-    <div>
-      <nav className="bg-gray-800">
+    <div className="">
+      <nav className="bg-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img
-                  className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  alt="Workflow"
-                />
+                <img className="h-8 w-8" src={logo} alt="Workflow" />
               </div>
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="ml-10 flex items-baseline space-x-1">
                   <a
                     href="#"
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-yellow block  px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Dashboard
+                    Home
                   </a>
 
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Team
+                    Services
                   </a>
 
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Projects
+                    Explore
                   </a>
 
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Calendar
+                    About
                   </a>
 
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Reports
+                    Contact
+                  </a>
+
+                  <a
+                    href="/Login"
+                    className="text-gray-300 hover:bg-gray-700  hover:text-navy-blue pr-28 py-2 rounded-md text-sm font-medium absolute right-20 transition-duration:300"
+                  >
+                    Login
+                  </a>
+                  <a
+                    href="/Signup"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue pr-20 py-2 rounded-md text-sm font-medium absolute right-5 transition-duration:300 transition-timing-function:ease-out;"
+                  >
+                    Signup
                   </a>
                 </div>
               </div>
@@ -102,9 +112,9 @@ function HomePage() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
               href="#"
-              className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-gray-300 hover:bg-gray-700 hover:text-yellow block px-3 py-2 rounded-md text-base font-medium"
             >
-              Dashboard
+              Home
             </a>
 
             <a
@@ -140,22 +150,80 @@ function HomePage() {
 
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+          <p className="text-xl font-bold text-gray-900">Dashboard</p>
         </div>
       </header>
       <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          {/* <!-- Replace with your content --> */}
-          <div className="px-4 py-6 sm:px-0">
-            <div className="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+        <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+          <div class="rounded overflow-hidden shadow-lg">
+            <img class="w-full" src={logo} alt="Mountain"></img>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Mountain</div>
+              <p class="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
+                exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #photography
+              </span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #travel
+              </span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #winter
+              </span>
+            </div>
           </div>
-          {/* <!-- /End replace --> */}
+          <div class="rounded overflow-hidden shadow-lg">
+            <img class="w-full" src={logo} alt="River"></img>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">River</div>
+              <p class="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
+                exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #photography
+              </span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #travel
+              </span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #summer
+              </span>
+            </div>
+          </div>
+          <div class="rounded overflow-hidden shadow-lg">
+            <img class="w-full" src={logo} alt="River"></img>
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">River</div>
+              <p class="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus quia, Nonea! Maiores et perferendis eaque,
+                exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #photography
+              </span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #travel
+              </span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #summer
+              </span>
+            </div>
+          </div>
         </div>
       </main>
     </div>
   );
 }
 export default HomePage;
-
-
-
