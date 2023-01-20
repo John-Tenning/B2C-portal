@@ -13,7 +13,7 @@ const Login = () => {
 
   //   0 - Faculty
   //   1 - Student
-
+  
   return (
     <div className="flex w-screen overflow-hidden h-screen font-lato font-bold">
       <div className="w-[40%] flex-1 bg-white justify-center items-center">
@@ -75,13 +75,8 @@ const Login = () => {
               />
             </div>
           </div>
-<<<<<<< HEAD
           <div className="flex items-center justify-center text-bold bg-yellow text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
             <button className=" text-lg">Login</button>
-=======
-          <div className="flex items-center justify-center bg-yellow text-black py-1.5 px-6 mt-16 rounded-lg">
-            <button className="text-lg font-bold">Login</button>
->>>>>>> e901fc286fd9924530d702f407897c01a1660fe2
           </div>
           
           <div className="flex items-center justify-center mt-4">

@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../assets/logo.jpg";
-import food1 from "../assets/food1.jpeg"
-import food2 from "../assets/food2.jpeg"
-import food3 from "../assets/food3.jpeg"
+import food1 from "../assets/food1.jpeg";
+import food2 from "../assets/food2.jpeg";
+import food3 from "../assets/food3.jpeg";
 
 function HomePage() {
   return (
@@ -163,8 +163,8 @@ function HomePage() {
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">Meenakshi Mess</div>
               <p class="text-gray-700 text-base">
-                Located near PSG College of Technology, our mess has to
-                be the favourite food attraction of college going Students. 
+                Located near PSG College of Technology, our mess has to be the
+                favourite food attraction of college going Students.
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
@@ -184,8 +184,8 @@ function HomePage() {
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">Amman Mess</div>
               <p class="text-gray-700 text-base">
-                Amman Mess is the second crowded food place
-                next to Meenakshi Mess.
+                Amman Mess is the second crowded food place next to Meenakshi
+                Mess.
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
@@ -205,8 +205,8 @@ function HomePage() {
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">Kalaki</div>
               <p class="text-gray-700 text-base">
-                Popular among students by conducting fun activities.
-                10% offer for students comming in college ID.
+                Popular among students by conducting fun activities. 10% offer
+                for students comming in college ID.
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
