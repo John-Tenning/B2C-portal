@@ -7,8 +7,8 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [selected, setSelected] = useState(0);
-  //   0 - Faculty
-  //   1 - Student
+  //   0 - Corporate
+  //   1 - Customer
 
   return (
     <div className="flex w-screen overflow-hidden h-screen font-lato ">
@@ -61,7 +61,7 @@ const Signup = () => {
               />
             </div>
           </div>
-          <div className="flex items-center justify-center text-bold bg-yellow text-black py-1.5 px-6 mt-16 rounded-lg">
+          <div className="flex items-center justify-center text-bold bg-yellow text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
             <button className=" text-lg">Signup</button>
           </div>
           <div className="flex items-center justify-center mt-4">

@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import home from "../assets/homepage.jpg";
 import logo from "../assets/logo.jpg";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+// import { FaEyeSlash } from "react-icons/fa";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [selected, setSelected] = useState(0);
+  const [visibility, setVisibility] = useState(false);
+
   //   0 - Faculty
   //   1 - Student
 
@@ -48,21 +53,38 @@ const Login = () => {
                 type="text"
                 className="appearance-none outline-none border-b p-1 w-full border-b-fog"
               />
-              <p className="text-fog font-lato w-full mt-4">Password</p>
+              <div className="flex w-full">
+                <p className="text-fog font-lato w-full mt-4">Password</p>
+                <div className="flex-1"></div>
+
+                <button
+                  onClick={(e) => {
+                    setVisibility(!visibility);
+                  }}
+                >
+                  {visibility ? (
+                    <FaEye className="mt-4" />
+                  ) : (
+                    <FaEyeSlash className="mt-4" />
+                  )}
+                </button>
+              </div>
               <input
-                type="password"
+                type={visibility ? "text" : "password"}
                 className="appearance-none outline-none border-b p-1 w-full border-b-fog"
               />
             </div>
           </div>
-          <div className="flex items-center justify-center text-bold bg-yellow text-black py-1.5 px-6 mt-16 rounded-lg">
-            <button className=" text-lg">Logn</button>
+          <div className="flex items-center justify-center text-bold bg-yellow text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
+            <button className=" text-lg">Login</button>
           </div>
+          
           <div className="flex items-center justify-center mt-4">
             <p className="text-xs">
-              <Link to="/signup">Not have an Account ? {"  "}
-              <span className="text-dark underline">
-              Sign Up</span></Link>
+              <Link to="/signup">
+                Not have an Account ? {"  "}
+                <span className="text-dark underline">Sign Up</span>
+              </Link>
             </p>
           </div>
         </div>
