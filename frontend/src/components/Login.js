@@ -75,7 +75,7 @@ const Login = () => {
               />
             </div>
           </div>
-          <div className="flex items-center justify-center text-bold bg-yellow text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
+          <div className="flex items-center justify-center text-bold bg-yellow-400 text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
             <button className=" text-lg">Login</button>
           </div>
           
