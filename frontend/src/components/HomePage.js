@@ -1,8 +1,9 @@
 import React from "react";
 import logo from "../assets/logo.jpg";
 import food1 from "../assets/food1.jpeg";
-import food2 from "../assets/food2.jpeg";
-import food3 from "../assets/food3.jpeg";
+import food2 from "../assets/gym.jpeg";
+import food3 from "../assets/saloon.jpg";
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 
 function HomePage() {
   return (
@@ -45,13 +46,6 @@ function HomePage() {
                   </a>
 
                   <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Contact
-                  </a>
-
-                  <a
                     href="/Login"
                     className="text-gray-300 hover:bg-gray-700  hover:text-navy-blue pr-28 py-2 rounded-md text-sm font-medium absolute right-20 transition-duration:300"
                   >
@@ -66,87 +60,6 @@ function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden">
-              <button
-                type="button"
-                className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
-                <span className="sr-only">Open main menu</span>
-
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-
-                <svg
-                  className="hidden h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="md:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-yellow block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Home
-            </a>
-
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Team
-            </a>
-
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Projects
-            </a>
-
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Calendar
-            </a>
-
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Reports
-            </a>
           </div>
         </div>
       </nav>
@@ -157,73 +70,85 @@ function HomePage() {
         </div>
       </header>
       <main>
-        <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-          <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full h-50" src={food1} alt="Mountain"></img>
+        <div class="py-24 pl-24 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 ">
+          <div class="flex flex-col rounded overflow-hidden shadow-lg w-[80%]">
+            <img class="h-[55%]" src={food1}></img>
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Meenakshi Mess</div>
+              <div class="font-bold text-xl mb-2">Restaurant </div>
               <p class="text-gray-700 text-base">
-                Located near PSG College of Technology, our mess has to be the
-                favourite food attraction of college going Students.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
               </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #mess_food
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #hostel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #chicken
-              </span>
             </div>
           </div>
-          <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full h-50" src={food2} alt="River"></img>
+          <div class="flex flex-col rounded overflow-hidden shadow-lg w-[80%]">
+            <img class="h-[55%]" src={food2}></img>
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Amman Mess</div>
+              <div class="font-bold text-xl mb-2">Gym</div>
               <p class="text-gray-700 text-base">
-                Amman Mess is the second crowded food place next to Meenakshi
-                Mess.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
               </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #food
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #gilma_biryani
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #amman
-              </span>
             </div>
           </div>
-          <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full h-50" src={food3} alt="River"></img>
+          <div class="flex flex-col rounded overflow-hidden shadow-lg w-[80%]">
+            <img class="h-[55%]" src={food3}></img>
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Kalaki</div>
+              <div class="font-bold text-xl mb-2">Saloon</div>
               <p class="text-gray-700 text-base">
-                Popular among students by conducting fun activities. 10% offer
-                for students comming in college ID.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
               </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #Kalaki
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #juicy_grill
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #offer
-              </span>
             </div>
           </div>
         </div>
       </main>
+      <footer className=" flex flex-col justify-center items-center font-poppins bg-black p-6">
+        <p className="text-white mb-6">Site developed By</p>
+        <div className="flex flex-col items-center justify-center space-y-2 lg:flex-row lg:space-y-0 lg:space-x-12">
+          <DeveloperItem
+            name="Deepak S G "
+            github_id="deepaksg0210"
+            mail_id="20z213@psgtech.ac.in"
+          />
+          <DeveloperItem
+            name="Krithik R"
+            github_id="krithik2208"
+            mail_id="20z229@psgtech.ac.in"
+          />
+          <DeveloperItem
+            name="R A Sashti Amar"
+            github_id="John-Tenning"
+            mail_id="20z247@psgtech.ac.in"
+          />
+          <DeveloperItem
+            name="Viraj Agarwal"
+            github_id="Viraj-Agarwal"
+            mail_id="20z259@psgtech.ac.in "
+          />
+        </div>
+      </footer>
     </div>
   );
 }
 export default HomePage;
+
+export const DeveloperItem = ({ name, github_id, mail_id }) => {
+  return (
+    <div className="font-ubuntu flex flex-col space-y-1 text-white text-center items-center">
+      <p className="font-bold">{name}</p>
+      <button className="flex space-x-2 items-center group text-xs">
+        <AiFillGithub />
+        <p className="border-b border-black group-hover:border-white border-dashed">
+          {github_id}
+        </p>
+      </button>
+      <button className="flex space-x-2 items-center group text-xs">
+        <AiOutlineMail />
+        <p className="border-b border-black group-hover:border-white border-dashed">
+          {mail_id}
+        </p>
+      </button>
+    </div>
+  );
+};
