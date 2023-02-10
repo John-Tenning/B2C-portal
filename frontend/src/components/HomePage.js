@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import food1 from "../assets/food1.jpeg";
 import food2 from "../assets/gym.jpeg";
 import food3 from "../assets/saloon.jpg";
@@ -8,59 +8,19 @@ import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 function HomePage() {
   return (
     <div className="">
-      <nav className="bg-grey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <img className="h-8 w-8" src={logo} alt="Workflow" />
-              </div>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-1">
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue block  px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    Home
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Services
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Explore
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    About
-                  </a>
-
-                  <a
-                    href="/Login"
-                    className="text-gray-300 hover:bg-gray-700  hover:text-navy-blue pr-28 py-2 rounded-md text-sm font-medium absolute right-20 transition-duration:300"
-                  >
-                    Login
-                  </a>
-                  <a
-                    href="/Signup"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-navy-blue pr-20 py-2 rounded-md text-sm font-medium absolute right-5 transition-duration:300 transition-timing-function:ease-out;"
-                  >
-                    Signup
-                  </a>
-                </div>
-              </div>
-            </div>
+      <nav className="bg-grey flex justify-center items-center">
+        <div className="flex">
+          <div className="h-12 px-2 mt-1">
+            <img src={logo} className = "h-full w-auto"/>
           </div>
+          <button className="p-4">Home</button>
+          <button className="p-4">Services</button>
+          <button className="p-4">Explore</button>
+        </div>
+        <div className="flex-1 w-full"></div>
+        <div className="flex">
+          <button className="p-4">Login</button>
+          <button className="p-4">Sign Up</button>
         </div>
       </nav>
 
