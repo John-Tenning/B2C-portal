@@ -3,7 +3,7 @@ import Login from "./components/Login";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Signup from "./components/Signup";
 import Home from "./components/HomePage";
-
+import Navbar from "./components/Navbar";
 // import { NavBar } from "@tgashwinkumar/microservices-library";
 const App = () => {
   return (
