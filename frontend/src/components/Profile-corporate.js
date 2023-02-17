@@ -7,7 +7,7 @@ export const Profile = () => {
   return (
     <div className="">
       <div className="">
-        <nav className="bg-grey flex justify-center items-center">
+        <nav className="bg-green-200 flex justify-center items-center">
           <div className="flex">
             <div className="h-12 px-2 mt-1">
               <img src={logo} className="h-full w-auto" />
@@ -32,9 +32,18 @@ export const Profile = () => {
         <div className="flex flex-col justify-start items-start w-1/2">
           <div className={`w-full flex flex-col items-start`}>
             <p className="font-lato w-full mt-4 p-6">Email Address</p>
+            <p className="font-lato w-full mt-4 p-6">Company Name</p>
+            <p className="font-lato w-full mt-4 p-6">Company Description</p>
+            <p className="font-lato w-full mt-4 p-6">Company Contact Details</p>
+            <p className="font-lato w-full mt-4 p-6">Company Location</p>
+
+
+
           </div>
         </div>
       </div>
+    
+      
       <div className="">
         <footer className=" flex flex-col justify-center items-center font-poppins bg-black p-6">
           <p className="text-white mb-6">Site developed By</p>
