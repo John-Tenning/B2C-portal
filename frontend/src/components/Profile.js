@@ -18,8 +18,12 @@ export const Profile = () => {
           </div>
           <div className="flex-1 w-full"></div>
           <div className="flex">
-            <button className="p-4">Login</button>
-            <button className="p-4">Sign Up</button>
+            <button className="p-4">
+              <Link to="/login">Login</Link>
+            </button>
+            <button className="p-4">
+              <Link to="/signup">SignUp</Link>
+            </button>
           </div>
         </nav>
       </div>
