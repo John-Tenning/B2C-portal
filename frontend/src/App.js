@@ -12,21 +12,11 @@ const App = () => {
     <div className="">
       <BrowserRouter>
         <Routes>
-          <Route index path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route index path="/service" element={<Services />} />
-
-          
-
-          {/* <Route
-            path="/test"
-            element={
-              <div>
-                <NavBar applicationName="NavbarHeader"/>
-              </div>
-            }
-          /> */}
+          <Route index path="/" element={<Services />} />
+          <Route index path="/home" element={<Home />} />
+          <Route path="/" element={<Profile />} />  
         </Routes>
       </BrowserRouter>
     </div>
