@@ -3,7 +3,7 @@ import Login from "./components/Login";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Signup from "./components/Signup";
 import Home from "./components/HomePage";
-import Services from "./components/Services";
+import Services from "./components/Service";
 import Profile_CO from "./components/Profile-corporate"
 import Profile_CU from "./components/Profile-customer"
 

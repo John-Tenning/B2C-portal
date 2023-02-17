@@ -23,7 +23,7 @@ const Service = () => {
       <h2 className="text-xl font-semibold text- px-5 ml-10 py-6 mb-4">
         Enter your Company Details Here
       </h2>
-      <div className="flex flex-col justify-center items-left ml-20">
+      <div className="flex flex-col justify-center items-left ml-20 py-6">
         <div className="flex flex-col justify-center items-center w-1/2">
           <div className="flex flex-col justify-start items-start w-full">
             <p className="text-regular font-lato w-full mt-4">Company Name</p>
@@ -74,6 +74,7 @@ const Service = () => {
           </div>
         </div>
       </div>
+      <ContactUs />
     </div>
   );
 };

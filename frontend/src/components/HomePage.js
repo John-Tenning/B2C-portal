@@ -16,7 +16,7 @@ function HomePage() {
           <div className="bg-white ml-12 rounded-lg flex">
             <input
               type="text"
-              className="bg-gray-200 py-0 rounded-lg w-full"
+              className="bg-gray-200 py-0 px-2 rounded-lg w-full"
               placeholder="Search the Market"
             />
             <button className="bg-yellow-400 text-white justify-center p-2 rounded-lg ml-2">
