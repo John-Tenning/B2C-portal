@@ -3,12 +3,32 @@ import { Link } from "react-router-dom";
 import home from "../assets/homepage.jpg";
 import logo from "../assets/logo.jpg";
 import ContactUs from "./ContactUs";
+import TextInput from "./Input";
+import axios from "axios";
+
+
 const Signup = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setpassword] = useState("");
+  const [confpwd, setconfpwd] = useState("");
   const [selected, setSelected] = useState(0);
   //   0 - Corporate
   //   1 - Customer
+  const handleClick = () => {
+    axios
+      .post("http://localhost:3000/signup", {
+        username: username,
+        password: password,
+        confpwd: confpwd,
+        selected: selected,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="">
@@ -49,27 +69,32 @@ const Signup = () => {
               <div
                 className={`w-full flex flex-col items-start justify-center`}
               >
-                <p className="text-fog font-lato w-full mt-4">Email Address</p>
-                <input
-                  type="text"
-                  className="appearance-none outline-none border-b p-1 w-full border-b-fog"
+                <TextInput
+                  className="mt-8"
+                  valueState={[username, setUsername]}
+                  placeholder="Enter Username"
+                  title="Username"
                 />
-                <p className="text-fog font-lato w-full mt-4">Password</p>
-                <input
+                <TextInput
+                  className="mt-8"
+                  valueState={[password, setpassword]}
+                  placeholder="Enter Password"
+                  title="Password"
                   type="password"
-                  className="appearance-none outline-none border-b p-1 w-full border-b-fog"
                 />
-                <p className="text-fog font-lato w-full mt-4">
-                  Confirm Password
-                </p>
-                <input
+                <TextInput
+                  className="mt-8"
+                  valueState={[confpwd, setconfpwd]}
+                  placeholder="Confirm Password"
+                  title="Password"
                   type="password"
-                  className="appearance-none outline-none border-b p-1 w-full border-b-fog"
                 />
               </div>
             </div>
             <div className="flex items-center justify-center text-bold bg-yellow-400 text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
-              <button className=" text-lg">Signup</button>
+              <button className="text-lg" handleclick={handleClick}>
+                Signup
+              </button>
             </div>
             <div className="flex items-center justify-center mt-4">
               <p className="text-xs">
