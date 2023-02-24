@@ -6,7 +6,6 @@ import ContactUs from "./ContactUs";
 import TextInput from "./Input";
 import axios from "axios";
 
-
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [password, setpassword] = useState("");
@@ -15,19 +14,52 @@ const Signup = () => {
   //   0 - Corporate
   //   1 - Customer
   const handleClick = () => {
-    axios
-      .post("http://localhost:3000/signup", {
-        username: username,
-        password: password,
-        confpwd: confpwd,
-        selected: selected,
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    if (password != confpwd) {
+      alert("Passwords do not match");
+      return;
+    }
+    if (password.includes(" ")) {
+      alert("Password cannot contain spaces");
+      return;
+    }
+    if (username.includes(" ")) {
+      alert("Username cannot contain spaces");
+      return;
+    }
+    if (password.length < 8) {
+      alert("Password must be atleast 8 characters long");
+      return;
+    }
+    if (password.length > 20) {
+      alert("Password cannot be more than 20 characters long");
+      return;
+    }
+    if (username.length < 8) {
+      alert("Username must be atleast 8 characters long");
+      return;
+    }
+    // password must contain 1 special character
+    if (!password.match(/[^a-zA-Z0-9]/)) {
+      alert("Password must contain atleast 1 special character");
+      return;
+    }
+    // password must contain 1 number
+    if (!password.match(/[0-9]/)) {
+      alert("Password must contain atleast 1 number");
+      return;
+    }
+    console.log({
+      username: username,
+      password: password,
+      confpwd: confpwd,
+      selected: selected,
+    });
+
+    setUsername("");
+    setpassword("");
+    setconfpwd("");
+    setSelected(0);
+    
   };
 
   return (
@@ -86,13 +118,13 @@ const Signup = () => {
                   className="mt-8"
                   valueState={[confpwd, setconfpwd]}
                   placeholder="Confirm Password"
-                  title="Password"
+                  title="Re-Enter password"
                   type="password"
                 />
               </div>
             </div>
             <div className="flex items-center justify-center text-bold bg-yellow-400 text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
-              <button className="text-lg" handleclick={handleClick}>
+              <button className="text-lg" onClick={handleClick}>
                 Signup
               </button>
             </div>
