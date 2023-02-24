@@ -6,14 +6,23 @@ import food3 from "../assets/saloon.jpg";
 import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
 
-
 function HomePage() {
   return (
     <div className="">
-      <Navbar/>
+      <Navbar />
       <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <p className="text-xl font-bold text-gray-900">Dashboard</p>
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex">
+          <p className="text-xl font-bold text-gray-900 px-2">Dashboard</p>
+          <div className="bg-white ml-12 rounded-lg flex">
+            <input
+              type="text"
+              className="bg-gray-200 py-0 rounded-lg w-full"
+              placeholder="Search the Market"
+            />
+            <button className="bg-yellow-400 text-white justify-center p-2 rounded-lg ml-2">
+              Search
+            </button>
+          </div>
         </div>
       </header>
       <main>
@@ -50,10 +59,8 @@ function HomePage() {
           </div>
         </div>
       </main>
-      <ContactUs/>
+      <ContactUs />
     </div>
   );
 }
 export default HomePage;
-
-

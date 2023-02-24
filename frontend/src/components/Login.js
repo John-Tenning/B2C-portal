@@ -5,10 +5,11 @@ import logo from "../assets/logo.jpg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 // import { FaEyeSlash } from "react-icons/fa";
 import ContactUs from "./ContactUs";
+import TextInput from "./Input";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setpassword] = useState("");
   const [selected, setSelected] = useState(0);
   const [visibility, setVisibility] = useState(false);
 
@@ -54,31 +55,20 @@ const Login = () => {
               <div
                 className={`w-full flex flex-col items-start justify-center`}
               >
-                <p className="text-fog font-lato w-full mt-4">Email Address</p>
-                <input
-                  type="text"
-                  className="appearance-none outline-none border-b p-1 w-full border-b-fog"
+                <TextInput
+                  className="mt-8"
+                  valueState={[username, setUsername]}
+                  placeholder="Enter Username"
+                  title="Username"
                 />
-                <div className="flex w-full">
-                  <p className="text-fog font-lato w-full mt-4">Password</p>
-                  <div className="flex-1"></div>
+                <TextInput
+                  className="mt-8"
+                  valueState={[password, setpassword]}
+                  placeholder="Enter Password"
+                  title="Password"
+                  type="password"
+                />
 
-                  <button
-                    onClick={(e) => {
-                      setVisibility(!visibility);
-                    }}
-                  >
-                    {visibility ? (
-                      <FaEye className="mt-4" />
-                    ) : (
-                      <FaEyeSlash className="mt-4" />
-                    )}
-                  </button>
-                </div>
-                <input
-                  type={visibility ? "text" : "password"}
-                  className="appearance-none outline-none border-b p-1 w-full border-b-fog"
-                />
               </div>
             </div>
             <div className="flex items-center justify-center text-bold bg-yellow-400 text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
@@ -111,6 +101,3 @@ const Login = () => {
 };
 
 export default Login;
-{
-  /* <Link to="/signup">here</Link> */
-}
