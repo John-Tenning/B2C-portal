@@ -6,12 +6,26 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 // import { FaEyeSlash } from "react-icons/fa";
 import ContactUs from "./ContactUs";
 import TextInput from "./Input";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setpassword] = useState("");
   const [selected, setSelected] = useState(0);
-  const [visibility, setVisibility] = useState(false);
+  const handleClick = () => {
+    console.log({
+      username: username,
+      password: password,
+      selected: selected,
+    });
+    if (password === "admin@12" && username === "admin") {
+      alert("Login Successful");
+      navigate("/");
+    } else {
+      alert("Login Failed");
+    }
+  };
 
   //   0 - Faculty
   //   1 - Student
@@ -68,11 +82,12 @@ const Login = () => {
                   title="Password"
                   type="password"
                 />
-
               </div>
             </div>
             <div className="flex items-center justify-center text-bold bg-yellow-400 text-black py-1.5 px-6 mt-16 rounded-lg hover:bg-black hover:text-white">
-              <button className=" text-lg">Login</button>
+              <button className=" text-lg" onClick={handleClick}>
+                Login
+              </button>
             </div>
 
             <div className="flex items-center justify-center mt-4">
