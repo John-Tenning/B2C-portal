@@ -2,6 +2,9 @@ module.exports = {
   mode: "jit",
   purge: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
+    fontFamily: {
+      lato: ["Lato", "sans-serif"],
+    },
     extend: {
       colors: {
         transparent: "transparent",
@@ -13,9 +16,6 @@ module.exports = {
         "navy-blue": "#001AA0",
         fog: "#B9B9B9",
         smoke: "#D9D9D9",
-      },
-      fontFamily: {
-        lato: ["Lato", "sans-serif"],
       },
     },
   },
