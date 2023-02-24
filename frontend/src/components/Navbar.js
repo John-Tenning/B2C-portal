@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </button>
           <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2">
-          <Link to="/service">Services</Link>
+          <Link to="/services">Services</Link>
           </button>
           <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2">Explore</button>
         </div>
