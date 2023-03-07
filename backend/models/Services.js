@@ -20,6 +20,14 @@ const ServicesSchema = new Schema({
     address: {
         type: String,
         required: true,
+    },
+    images: [{
+        type: String,
+        required: true,
+    }],
+    category: {
+        type: String,
+        required: true,
     }
 });
 
