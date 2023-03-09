@@ -20,57 +20,69 @@ export const Profile = () => {
           <p className="text-2xl font-bold text-black  px-2 py-0">Profile</p>
         </div>
       </header>
-      <h2 className="text-xl font-semibold text- px-5 ml-10 py-6 ">
-        Update Profile
-      </h2>
-      <div className="flex w-screen overflow-hidden px-20 mb-20">
-        <div className="flex flex-col justify-start items-start w-[35%]">
-          <div className="p-2 w-[50%]">
-            <TextInput
-              className="mt-8"
-              valueState={[email, setEmail]}
-              placeholder="Enter Email"
-              title="Email"
-            />
+      <div className="flex w-screen overflow-hidden justify-center  mb-20 px-20">
+        <div className="flex flex-col justify-center items-center w-[50%] ">
+          <div class="flex  justify-center   mt-10 h-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200  w-[70%]">
+            <div class="flex flex-col items-center justify-center ">
+              <h5 class="mb-1 text-l font-medium text-gray-900 dark:text-white">
+                Company Name
+              </h5>
+              <span class="text-sm text-gray-500 dark:text-gray-400">Name</span>
+            </div>
           </div>
-          <div className="p-2 w-[50%]">
-            <TextInput
-              className="mt-8"
-              valueState={[companyName, setCompanyName]}
-              placeholder="Enter Comany Name"
-              title="Company Name"
-            />
+          <div class="flex  justify-center  mt-6 h-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200 w-[70%]">
+            <div class="flex flex-col items-center justify-center ">
+              <h5 class="mb-1 text-l font-medium text-gray-900 dark:text-white">
+                Email
+              </h5>
+              <span class="text-sm text-gray-500 dark:text-gray-400">
+                example@abc.com
+              </span>
+            </div>
           </div>
-          <div className="p-2 w-[50%]">
-            <TextInput
-              className="mt-8"
-              valueState={[companyDescription, setCompanyDescription]}
-              placeholder="Enter Description"
-              title="Company Description"
-            />
-          </div>
-        </div>
-        <div className="flex flex-col justify-start items-start w-[35%]">
-          <div className="p-2 w-[50%]">
-            <TextInput
-              className="mt-8"
-              valueState={[companyContact, setCompanyContact]}
-              placeholder="Enter Contact Details"
-              title="Contact Details"
-            />
-          </div>
-          <div className="p-2 w-[50%]">
-            <TextInput
-              className="mt-8"
-              valueState={[companyLocation, setcCompanyLocation]}
-              placeholder="Enter Company Location"
-              title="Company Location"
-            />
+          <div class="flex  justify-center  mt-6 h-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200  w-[70%]">
+            <div class="flex flex-col items-center justify-center ">
+              <h5 class="mb-1 text-l font-medium text-gray-900 dark:text-white">
+                Contact
+              </h5>
+              <span class="text-sm text-gray-500 dark:text-gray-400">
+                1234567890
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="flex items-center justify-center text-bold bg-yellow-400 text-black  rounded-lg hover:bg-black hover:text-white">
-        <button className=" text-lg">Submit</button>
+        <div className="flex flex-col justify-center items-start w-[50%] ">
+          <div class="flex  justify-center   mt-10 h-[61%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200 w-[70%] ">
+            <div class="flex flex-col items-center justify-center ">
+              <h5 class="mb-1 text-l font-medium text-gray-900 dark:text-white">
+                Company Description
+              </h5>
+              <span class="text-sm text-gray-500 dark:text-gray-400">
+                Description
+              </span>
+            </div>
+          </div>
+          <div class="flex  justify-center  mt-6 h-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200  w-[70%]">
+            <div class="flex flex-col items-center justify-center ">
+              <h5 class="mb-1 text-l font-medium text-gray-900 dark:text-white">
+                Location
+              </h5>
+              <span class="text-sm text-gray-500 dark:text-gray-400">
+                Locaton of the company
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-start w-[45%] ">
+        <div class="flex  justify-center  mt-10 h-full w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200  w-full">
+            <div class="flex flex-col items-center mt-8 ">
+              <h5 class="mb-10 text-l font-medium text-gray-900 dark:text-white">
+                Images
+              </h5>
+              <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={logo} alt="Dummy image"/>
+            </div>
+          </div>
+        </div>
       </div>
       <ContactUs />
     </div>

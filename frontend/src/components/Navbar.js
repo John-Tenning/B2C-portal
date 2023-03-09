@@ -15,7 +15,7 @@ const Navbar = () => {
           <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2">
           <Link to="/services">Services</Link>
           </button>
-          <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2">Explore</button>
+          <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2"><Link to="/profile_co">Profile</Link></button>
         </div>
         <div className="flex-1 w-full"></div>
         <div className="flex">
