@@ -4,8 +4,9 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Signup from "./components/Signup";
 import Home from "./components/HomePage";
 import Services from "./components/Service";
-import Profile_CO from "./components/Profile-corporate"
-import Profile_CU from "./components/Profile-customer"
+import Profile_CO from "./components/Profile-corporate";
+import Profile_CU from "./components/Profile-customer";
+import { Toaster } from "react-hot-toast";
 
 import Navbar from "./components/Navbar";
 // import { NavBar } from "@tgashwinkumar/microservices-library";
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <div className="">
       <BrowserRouter>
+        <Toaster />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -20,7 +22,6 @@ const App = () => {
           <Route index path="/" element={<Home />} />
           <Route path="/profile_co" element={<Profile_CO />} />
           <Route path="/profile_cu" element={<Profile_CU />} />
-          
 
           {/* <Route
             path="/test"
