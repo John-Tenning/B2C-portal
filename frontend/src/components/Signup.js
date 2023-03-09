@@ -4,6 +4,7 @@ import home from "../assets/homepage.jpg";
 import logo from "../assets/logo.jpg";
 import ContactUs from "./ContactUs";
 import TextInput from "./Input";
+import { toast } from "react-hot-toast";
 import axios from "axios";
 
 
@@ -16,37 +17,37 @@ const Signup = () => {
   //   1 - Customer
   const handleClick = () => {
     if (password != confpwd) {
-      alert("Passwords do not match");
+      toast.error("Passwords do not match");
       return;
     }
     if (password.includes(" ")) {
-      alert("Password cannot contain spaces");
+      toast.error("Password cannot contain spaces");
       return;
     }
     if (username.includes(" ")) {
-      alert("Username cannot contain spaces");
+      toast.error("Username cannot contain spaces");
       return;
     }
     if (password.length < 8) {
-      alert("Password must be atleast 8 characters long");
+      toast.error("Password must be atleast 8 characters long");
       return;
     }
     if (password.length > 20) {
-      alert("Password cannot be more than 20 characters long");
+      toast.error("Password cannot be more than 20 characters long");
       return;
     }
     if (username.length < 8) {
-      alert("Username must be atleast 8 characters long");
+      toast.error("Username must be atleast 8 characters long");
       return;
     }
     // password must contain 1 special character
     if (!password.match(/[^a-zA-Z0-9]/)) {
-      alert("Password must contain atleast 1 special character");
+      toast.error("Password must contain atleast 1 special character");
       return;
     }
     // password must contain 1 number
     if (!password.match(/[0-9]/)) {
-      alert("Password must contain atleast 1 number");
+      toast.error("Password must contain atleast 1 number");
       return;
     }
     console.log({
