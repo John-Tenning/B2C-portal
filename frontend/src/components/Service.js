@@ -13,7 +13,7 @@ const Service = () => {
 
   return (
     <div className="">
-      <Navbar />
+      <Navbar isCorporate="true" />
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 fles">
           <p className="text-2xl font-bold text-black  px-2 py-0">

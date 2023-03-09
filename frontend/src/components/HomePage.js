@@ -9,7 +9,9 @@ import ContactUs from "./ContactUs";
 function HomePage() {
   return (
     <div className="">
-      <Navbar />
+      <Navbar 
+        isCorporate="true"
+      />
       <header className="bg-white shadow">
         <div className="flex font-lato">
           <div className="py-6 px-4 sm:px-6 flex items-center justify-end w-[20%]">

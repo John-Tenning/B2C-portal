@@ -11,7 +11,8 @@ app.use(json());
 app.get("/", async (req, res) => {
     res.send("Welcome to the SU CMS API");
   });
-  
+
+
   // perform a database connection when the server starts
   connectToServer(function (err) {
     if (err) {

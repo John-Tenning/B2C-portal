@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import home from "../assets/homepage.jpg";
 import logo from "../assets/logo.jpg";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-// import { FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-hot-toast";
 import ContactUs from "./ContactUs";
 import TextInput from "./Input";
 import { useNavigate } from "react-router-dom";
@@ -20,10 +19,10 @@ const Login = () => {
       selected: selected,
     });
     if (password === "admin@12" && username === "admin") {
-      alert("Login Successful");
+      toast.success("Login Successful");
       navigate("/");
     } else {
-      alert("Login Failed");
+      toast.error("Invalid Credentials");
     }
   };
 
