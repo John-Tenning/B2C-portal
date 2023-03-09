@@ -5,6 +5,7 @@ import {
     CORPORATE_URL,
     CUSTOMER_URL
 } from './config';
+import axios from 'axios';
 
 export const fetchLogin = (postBody) => axios.get(LOGIN_URL, postBody, {});
 

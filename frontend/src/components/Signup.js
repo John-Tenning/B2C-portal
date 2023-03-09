@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import home from "../assets/homepage.jpg";
 import logo from "../assets/logo.jpg";
 import ContactUs from "./ContactUs";
 import TextInput from "./Input";
 import { toast } from "react-hot-toast";
 import axios from "axios";
+import { fetchSignup } from "../API/calls";
 
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setpassword] = useState("");
   const [confpwd, setconfpwd] = useState("");
@@ -36,10 +38,6 @@ const Signup = () => {
       toast.error("Password cannot be more than 20 characters long");
       return;
     }
-    if (username.length < 8) {
-      toast.error("Username must be atleast 8 characters long");
-      return;
-    }
     // password must contain 1 special character
     if (!password.match(/[^a-zA-Z0-9]/)) {
       toast.error("Password must contain atleast 1 special character");
@@ -50,18 +48,45 @@ const Signup = () => {
       toast.error("Password must contain atleast 1 number");
       return;
     }
-    console.log({
-      username: username,
-      password: password,
-      confpwd: confpwd,
-      selected: selected,
-    });
-
-    setUsername("");
-    setpassword("");
-    setconfpwd("");
-    setSelected(0);
-    
+    console.log(
+      {username : username, password : password, role : selected ? "customer" : "corporate"}
+    )
+    if (selected) {
+      toast.promise(
+        fetchSignup({
+          username: username,
+          password: password,
+          role: "customer",
+        }),
+        {
+          loading: "Registering...",
+          success: (res) => {
+            return "Registered Successfully";
+          },
+          error: (err) => {
+            return `Error: ${err.response.data.error}`;
+          },
+        }
+      );
+    }else{
+      toast.promise(
+        fetchSignup({
+          username: username,
+          password: password,
+          role: "corporate",
+        }) , 
+        {
+          loading: "Registering...",
+          success: (res) => {
+            return "Registered Successfully";
+          },
+          error: (err) => {
+            return `Error: ${err.response.data.error}`;
+          },
+        }
+      )
+    }
+    navigate("/login");
   };
 
   return (

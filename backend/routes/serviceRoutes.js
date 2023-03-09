@@ -1,5 +1,5 @@
 import { Router } from "express";
-import Service from "../models/Service.js";
+import Service from "../models/Services.js";
 
 const router = Router();
 
@@ -40,3 +40,5 @@ router.delete("/:id", async (req, res) => {
     res.status(200).json(service);
   }
 });
+
+export default router;
