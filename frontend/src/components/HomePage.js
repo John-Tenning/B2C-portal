@@ -37,9 +37,13 @@ function HomePage() {
             <img className="h-[55%]" src={food1}></img>
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Restaurant </div>
-              <p className="text-gray-700 font-thin">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+              <p className="text-gray-700">
+                Meenakshi Restaurant is a family owned and operated restaurant
+              </p>
+              <br></br>
+              <p className="font-bold ">Location: </p>
+              <p className="text-gray-700">
+                Amman Koil Street, Peelamedu, Coimbatore
               </p>
             </div>
           </div>
@@ -48,8 +52,12 @@ function HomePage() {
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Gym</div>
               <p className="text-gray-700 text-base">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Winners Gym is dedicated to providing the best fitness experience
+              </p>
+              <br></br>
+              <p className="font-bold ">Location: </p>
+              <p className="text-gray-700">
+                Avinashi Road, Peelamedu, Coimbatore
               </p>
             </div>
           </div>
@@ -58,8 +66,12 @@ function HomePage() {
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Saloon</div>
               <p className="text-gray-700 text-base">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Get the best salon experience at the comfort of your home
+              </p>
+              <br></br>
+              <p className="font-bold ">Location: </p>
+              <p className="text-gray-700">
+                RS Puram, Coimbatore, Tamil Nadu
               </p>
             </div>
           </div>
