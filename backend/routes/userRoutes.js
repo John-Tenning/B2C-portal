@@ -1,5 +1,7 @@
 import { Router } from "express";
 import User from "../models/User.js";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 const router = Router();
 
@@ -42,5 +44,26 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
+router.post("/login", async (req, res) => {
+    const { username, password } = req.body;
+    try {
+      const user = await User.findOne({ username: username });
+      if (user) {
+        const auth = bcrypt.compareSync(password, user.password);
+        if (auth) {
+          res.status(200).json({
+            token: jwt.sign({ _id: user._id }, username),
+          });
+        } else {
+          res.status(401).json({ error: "Invalid credentials" });
+        }
+      } else {
+        res.status(401).json({ error: "Invalid credentials" });
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ error: error.message });
+    }
+  });
 
 export default router;

@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import ContactUs from "./ContactUs";
 import TextInput from "./Input";
 import { useNavigate } from "react-router-dom";
+import { fetchLogin } from "../API/calls";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -13,17 +14,28 @@ const Login = () => {
   const [password, setpassword] = useState("");
   const [selected, setSelected] = useState(0);
   const handleClick = () => {
-    console.log({
-      username: username,
-      password: password,
-      selected: selected,
-    });
-    if (password === "admin@12" && username === "admin") {
-      toast.success("Login Successful");
-      navigate("/");
-    } else {
-      toast.error("Invalid Credentials");
-    }
+    toast.promise(
+      fetchLogin({
+        username: username,
+        password: password,
+      }),
+      {
+        loading: "Verifying...",
+        success: (res) => {
+          // localStorage.setItem("rollno", rollNumber.toLowerCase());
+          localStorage.setItem("token", res.data.token);
+          // localStorage.setItem("rights", res.data.rights);
+          // navigate("/apply");
+          navigate("/home");
+          return "Login Successful";
+
+        },
+        error: (err) => {
+          console.log(err);
+          return `Retry again: ${err?.response?.data?.error}`;
+        },
+      }
+    );
   };
 
   //   0 - Faculty

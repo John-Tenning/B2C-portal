@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 const Navbar = ({ isCorporate = "false" }) => {
   return (
     <nav className="bg-grey flex justify-center items-center p-2 font-lato">
-      <div className="h-12 px-2 mt-1">
-        <img src={logo} className="h-full w-auto" />
-      </div>
+      <button className="h-12 px-2 mt-1">
+        <Link to="/home">
+          <img src={logo} className="h-full w-auto" />
+        </Link>
+      </button>
       <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2">
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
       </button>
       {isCorporate === "true" && (
         <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2">
@@ -28,10 +30,7 @@ const Navbar = ({ isCorporate = "false" }) => {
       <div className="flex-1 w-full"></div>
       <div className="flex">
         <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2">
-          <Link to="/login">Login</Link>
-        </button>
-        <button className="px-4 hover:bg-slate-400 hover:rounded-lg hover:py-2">
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/">Logout</Link>
         </button>
       </div>
     </nav>
