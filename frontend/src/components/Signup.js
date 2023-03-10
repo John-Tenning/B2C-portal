@@ -86,7 +86,7 @@ const Signup = () => {
         }
       )
     }
-    navigate("/login");
+    navigate("/");
   };
 
   return (
