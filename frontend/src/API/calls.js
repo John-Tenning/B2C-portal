@@ -10,3 +10,5 @@ import axios from 'axios';
 export const fetchLogin = (postBody) => axios.get(LOGIN_URL, postBody, {});
 
 export const fetchSignup = (postBody) => axios.post(SIGNUP_URL, postBody, {});
+
+export const fetchServices = (postBody) => axios.post(SERVICES_URL, postBody, {});

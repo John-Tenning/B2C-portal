@@ -9,7 +9,6 @@ import Profile_CU from "./components/Profile-customer";
 import { Toaster } from "react-hot-toast";
 
 import Navbar from "./components/Navbar";
-// import { NavBar } from "@tgashwinkumar/microservices-library";
 const App = () => {
   return (
     <div className="">

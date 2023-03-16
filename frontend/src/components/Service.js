@@ -2,14 +2,52 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
 import TextInput from "./Input";
+import { toast } from "react-hot-toast";
+import { Link , useNavigate} from "react-router-dom";
+import axios from "axios";
+import { fetchServices } from "../API/calls";
+
 
 const Service = () => {
+  const navigate = useNavigate();
   const [companyName, setCompanyName] = useState("");
   const [companyDescription, setCompanyDescription] = useState("");
   const [companyContact, setCompanyContact] = useState("");
   const [email, setEmail] = useState("");
-  const [companyLocation, setcCompanyLocation] = useState("");
+  const [companyLocation, setCompanyLocation] = useState("");
   const [companyImages, setCompanyImages] = useState([]);
+
+  const handleClick = () => {
+    console.log(
+      {companyName:companyName,
+      companyDescription:companyDescription,
+      companyContact:companyContact,
+      email:email,
+      companyLocation:companyLocation,
+      companyImages:companyImages
+    }
+    )
+    toast.promise(
+      fetchServices({
+        companyName: companyName,
+        companyDescription: companyDescription,
+        companyContact: companyContact,
+        email: email,
+        companyLocation: companyLocation,
+        companyImages: companyImages,
+      }),
+      {
+        loading: "Sending Details to Database",
+        success: (res) => {
+          return "Done Successfully";
+        },
+        error: (err) => {
+          return `Error: ${err.response.data.error}`;
+        },
+      }
+    );
+    navigate("/");
+  };
 
   return (
     <div className="">
@@ -61,7 +99,7 @@ const Service = () => {
               />
               <TextInput
                 className="mt-8"
-                valueState={[companyLocation, setcCompanyLocation]}
+                valueState={[companyLocation, setCompanyLocation]}
                 placeholder="Enter Company Location"
                 title="Company Location"
               />
@@ -77,7 +115,7 @@ const Service = () => {
       </div>
 
       <div className="flex items-center justify-center text-bold bg-yellow-400 text-black py-2  mt-16 mb-10 rounded-lg hover:bg-black hover:text-white">
-        <button className=" text-lg">Submit</button>
+        <button className=" text-lg" onClick={handleClick}>Submit</button>
       </div>
       <ContactUs />
     </div>
