@@ -29,12 +29,12 @@ const Service = () => {
     )
     toast.promise(
       fetchServices({
-        companyName: companyName,
-        companyDescription: companyDescription,
-        companyContact: companyContact,
+        name: companyName,
+        description: companyDescription,
+        phone: companyContact,
         email: email,
-        companyLocation: companyLocation,
-        companyImages: companyImages,
+        address: companyLocation,
+        images: companyImages,
       }),
       {
         loading: "Sending Details to Database",
@@ -46,7 +46,7 @@ const Service = () => {
         },
       }
     );
-    navigate("/");
+    navigate("/home");
   };
 
   return (

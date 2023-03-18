@@ -7,6 +7,9 @@ import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
 
 function HomePage() {
+  const username = localStorage.getItem("username");
+  const selected = localStorage.getItem("selected");
+  console.log(selected);
   return (
     <div className="">
       <Navbar 
