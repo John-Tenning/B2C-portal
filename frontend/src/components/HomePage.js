@@ -5,15 +5,28 @@ import food2 from "../assets/gym.jpeg";
 import food3 from "../assets/saloon.jpg";
 import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
+import axios from "axios";
+import { useEffect , useState} from "react";
 
 function HomePage() {
   const username = localStorage.getItem("username");
-  const selected = localStorage.getItem("selected");
+  const [selected, setSelected] = useState(0);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3002/api/users/name/" + username)
+      .then((res) => {
+        console.log(res.data);
+        setSelected(res.data.role);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   console.log(selected);
   return (
     <div className="">
       <Navbar 
-        isCorporate="true"
+        isCorporate={selected === "corporate" ? "true" : "false"}
       />
       <header className="bg-white shadow">
         <div className="flex font-lato">

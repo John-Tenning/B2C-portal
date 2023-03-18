@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
@@ -12,9 +12,13 @@ export const Profile = () => {
   const [companyContact, setCompanyContact] = useState("");
   const [email, setEmail] = useState("");
   const [companyLocation, setcCompanyLocation] = useState("");
+
+  const username = localStorage.getItem("username");
   return (
     <div className="">
-      <Navbar />
+      <Navbar 
+        isCorporate="true"
+      />
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 fles">
           <p className="text-2xl font-bold text-black  px-2 py-0">Profile</p>

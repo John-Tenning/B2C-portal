@@ -66,4 +66,14 @@ router.post("/login", async (req, res) => {
     }
   });
 
+router.get("/name/:username", async (req, res) => {
+    const user  = await User.findOne({ username: req.params.username });
+    if(!user) {
+        res.status(404).json({ message: "User not found" });
+    } else {
+        res.status(200).json(user);
+    }
+});
+
+
 export default router;

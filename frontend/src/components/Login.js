@@ -23,9 +23,11 @@ const Login = () => {
         loading: "Verifying...",
         success: (res) => {
           // localStorage.setItem("rollno", rollNumber.toLowerCase());
-          localStorage.setItem("token", res.data.token);
-          localStorage.setItem("selected", res.data.selected);
-          localStorage.setItem("username", res.data.username);
+          // localStorage.setItem("token", res.data.token);
+          // localStorage.setItem("selected", selected);
+          localStorage.setItem("username", username);
+          // console.log(res.data.selected)
+
           // localStorage.setItem("rights", res.data.rights);
           // navigate("/apply");
           navigate("/home");
