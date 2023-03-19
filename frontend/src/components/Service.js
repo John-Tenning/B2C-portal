@@ -41,6 +41,7 @@ const Service = () => {
     )
     toast.promise(
       fetchServices({
+        username: user,
         name: companyName,
         description: companyDescription,
         phone: companyContact,

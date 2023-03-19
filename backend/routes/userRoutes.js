@@ -46,6 +46,20 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+router.delete("/name/:username", async (req, res) => {
+  const user = await User.findOne({
+    username: req.params.username,
+  });
+  if (!user) {
+    res.status(404).json({ message: "User not found" });
+  } else {
+    await user.remove();
+    res.status(200).json({ message: "User deleted successfully" });
+  }
+});
+
+
+
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
   try {

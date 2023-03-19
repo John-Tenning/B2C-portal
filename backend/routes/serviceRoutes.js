@@ -12,6 +12,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/name/:username", async (req, res) => {
+  try {
+    const services = await Service.find({
+      username: req.params.username,
+    });
+    res.status(200).json(services);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+});
+
+
 router.post("/", async (req, res) => {
   const service = req.body;
   const newService = new Service(service);
@@ -32,12 +44,15 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
-  const service = await Service.findById(req.params.id);
+router.delete("/:name", async (req, res) => {
+  const service = await Service.findOne({
+    name: req.params.name,
+  });
   if (!service) {
     res.status(404).json({ message: "Service not found" });
   } else {
-    res.status(200).json(service);
+    await service.remove();
+    res.status(200).json({ message: "Service deleted successfully" });
   }
 });
 
