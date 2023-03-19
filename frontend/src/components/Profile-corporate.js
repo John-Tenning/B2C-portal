@@ -4,17 +4,34 @@ import logo from "../assets/logo.jpg";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
-import TextInput from "./Input";
+
+import axios from "axios";
+
 
 export const Profile = () => {
   const [companyName, setCompanyName] = useState("");
   const [companyDescription, setCompanyDescription] = useState("");
   const [companyContact, setCompanyContact] = useState("");
   const [email, setEmail] = useState("");
-  const [companyLocation, setcCompanyLocation] = useState("");
-
+  const [companyLocation, setCompanyLocation] = useState("");
+  const [companyImages, setCompanyImages] = useState([])
   const username = localStorage.getItem("username");
+  const fetchData = async () => {
+    const response = axios.get("http://localhost:3002/api/services" + username)
+    console.log(response);
+    setCompanyName(response.data.name);
+    setCompanyDescription(response.data.description);
+    setCompanyContact(response.data.phone);
+    setEmail(response.data.email);
+    setCompanyLocation(response.data.address);
+    setCompanyImages(response.data.images);
+  }
+  
+    useEffect(() => {
+      fetchData();  
+    }, []);
   return (
+    
     <div className="">
       <Navbar 
         isCorporate="true"
@@ -31,7 +48,9 @@ export const Profile = () => {
               <h5 class="mb-1 text-l font-medium text-gray-900 dark:text-white">
                 Company Name
               </h5>
-              <span class="text-sm text-gray-500 dark:text-gray-400">Name</span>
+              <span class="text-sm text-gray-500 dark:text-gray-400">
+                {companyName}
+              </span>
             </div>
           </div>
           <div class="flex  justify-center  mt-6 h-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200 w-[70%]">
@@ -40,7 +59,7 @@ export const Profile = () => {
                 Email
               </h5>
               <span class="text-sm text-gray-500 dark:text-gray-400">
-                example@abc.com
+                {email}
               </span>
             </div>
           </div>
@@ -50,7 +69,7 @@ export const Profile = () => {
                 Contact
               </h5>
               <span class="text-sm text-gray-500 dark:text-gray-400">
-                1234567890
+                {companyContact}
               </span>
             </div>
           </div>
@@ -62,7 +81,7 @@ export const Profile = () => {
                 Company Description
               </h5>
               <span class="text-sm text-gray-500 dark:text-gray-400">
-                Description
+                {companyDescription}
               </span>
             </div>
           </div>
@@ -72,7 +91,7 @@ export const Profile = () => {
                 Location
               </h5>
               <span class="text-sm text-gray-500 dark:text-gray-400">
-                Locaton of the company
+                {companyLocation}
               </span>
             </div>
           </div>
@@ -83,7 +102,7 @@ export const Profile = () => {
               <h5 class="mb-10 text-l font-medium text-gray-900 dark:text-white">
                 Images
               </h5>
-              <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={logo} alt="Dummy image"/>
+              <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={companyImages} alt="Dummy image"/>
             </div>
           </div>
         </div>
