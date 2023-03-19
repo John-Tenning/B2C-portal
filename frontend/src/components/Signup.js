@@ -64,6 +64,7 @@ const Signup = () => {
             return "Registered Successfully";
           },
           error: (err) => {
+            console.log(err.response.data.error);
             return `Error: ${err.response.data.error}`;
           },
         }

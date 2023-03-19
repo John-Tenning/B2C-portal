@@ -6,6 +6,8 @@ import { toast } from "react-hot-toast";
 import { Link , useNavigate} from "react-router-dom";
 import axios from "axios";
 import { fetchServices } from "../API/calls";
+import { useEffect } from "react";
+
 
 
 const Service = () => {
@@ -16,7 +18,17 @@ const Service = () => {
   const [email, setEmail] = useState("");
   const [companyLocation, setCompanyLocation] = useState("");
   const [companyImages, setCompanyImages] = useState([]);
+  const token = localStorage.getItem("token");
+  const user = localStorage.getItem("user");
 
+  useEffect(() => {
+    if (!token) {
+      toast.error("Please Login First");
+      navigate("/");
+    }
+  }, [])
+  
+  
   const handleClick = () => {
     console.log(
       {companyName:companyName,

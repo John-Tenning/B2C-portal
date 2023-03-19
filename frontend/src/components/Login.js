@@ -14,32 +14,24 @@ const Login = () => {
   const [password, setpassword] = useState("");
   const [selected, setSelected] = useState(0);
   const handleClick = () => {
-    toast.promise(
-      fetchLogin({
-        username: username,
-        password: password,
-      }),
-      {
-        loading: "Verifying...",
-        success: (res) => {
-          // localStorage.setItem("rollno", rollNumber.toLowerCase());
-          // localStorage.setItem("token", res.data.token);
-          // localStorage.setItem("selected", selected);
-          localStorage.setItem("username", username);
-          // console.log(res.data.selected)
-
-          // localStorage.setItem("rights", res.data.rights);
-          // navigate("/apply");
+    const postbody = { username: username, password: password };
+    fetchLogin(postbody)
+      .then((res) => {
+        // console.log(res.data);
+        if (res.status === 200) {
+          localStorage.setItem("token", res.data.token);
+          localStorage.setItem("user", res.data.username);
+          console.log(res.data.token);
+          console.log(res.data.username);
+          toast.success("Login Successful");
           navigate("/home");
-          return "Login Successful";
-
-        },
-        error: (err) => {
-          console.log(err);
-          return `Retry again: ${err?.response?.data?.error}`;
-        },
-      }
-    );
+        } else {
+          toast.error("Login Failed");
+        }
+      })
+      .catch((err) => {
+        toast.error("Login Failed");
+      });
   };
 
   //   0 - Faculty

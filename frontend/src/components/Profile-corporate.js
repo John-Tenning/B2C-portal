@@ -13,6 +13,7 @@ export const Profile = () => {
   const [companyDescription, setCompanyDescription] = useState("");
   const [companyContact, setCompanyContact] = useState("");
   const [email, setEmail] = useState("");
+<<<<<<< HEAD
   const [companyLocation, setCompanyLocation] = useState("");
   const [companyImages, setCompanyImages] = useState([])
   const username = localStorage.getItem("username");
@@ -30,6 +31,11 @@ export const Profile = () => {
     useEffect(() => {
       fetchData();  
     }, []);
+=======
+  const [companyLocation, setcCompanyLocation] = useState("");
+
+  const username = localStorage.getItem("user");
+>>>>>>> f16bed075ab343be75c8e33aeabd097a9f169cd4
   return (
     
     <div className="">
@@ -97,7 +103,7 @@ export const Profile = () => {
           </div>
         </div>
         <div className="flex flex-col items-start w-[45%] ">
-        <div class="flex  justify-center  mt-10 h-full w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200  w-full">
+        <div class="flex  justify-center  mt-10 h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200  w-full">
             <div class="flex flex-col items-center mt-8 ">
               <h5 class="mb-10 text-l font-medium text-gray-900 dark:text-white">
                 Images
