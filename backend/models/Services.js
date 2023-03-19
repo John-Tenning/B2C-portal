@@ -1,6 +1,10 @@
 import { Schema, model } from "mongoose";
 
 const ServicesSchema = new Schema({
+    username: {
+        type: String,
+        required: true,
+    },
     name: {
         type: String,
         required: true,
@@ -23,7 +27,6 @@ const ServicesSchema = new Schema({
     },
     images: [{
         type: String,
-        required: true,
     }],
     category: {
         type: String,
