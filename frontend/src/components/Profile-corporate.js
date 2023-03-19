@@ -78,7 +78,7 @@ export const Profile = () => {
           </div>
         </div>
         <div className="flex flex-col items-start w-[45%] ">
-        <div class="flex  justify-center  mt-10 h-full w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200  w-full">
+        <div class="flex  justify-center  mt-10 h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-blue-200  w-full">
             <div class="flex flex-col items-center mt-8 ">
               <h5 class="mb-10 text-l font-medium text-gray-900 dark:text-white">
                 Images
