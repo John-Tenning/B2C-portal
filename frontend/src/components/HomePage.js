@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import { toast } from "react-hot-toast";
 import food1 from "../assets/food1.jpeg";
 import food2 from "../assets/gym.jpeg";
 import food3 from "../assets/saloon.jpg";
@@ -7,12 +8,19 @@ import Navbar from "./Navbar";
 import ContactUs from "./ContactUs";
 import axios from "axios";
 import { useEffect , useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-  const username = localStorage.getItem("username");
+  const username = localStorage.getItem("user");
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
   const [selected, setSelected] = useState(0);
+
+  
+
   useEffect(() => {
-    axios
+    if(token){
+      axios
       .get("http://localhost:3002/api/users/name/" + username)
       .then((res) => {
         console.log(res.data);
@@ -21,6 +29,10 @@ function HomePage() {
       .catch((err) => {
         console.log(err);
       });
+    }else{
+      toast.error("Login First");
+      navigate("/")
+    }
   }, []);
   console.log(selected);
   return (

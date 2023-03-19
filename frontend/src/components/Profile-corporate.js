@@ -13,7 +13,7 @@ export const Profile = () => {
   const [email, setEmail] = useState("");
   const [companyLocation, setcCompanyLocation] = useState("");
 
-  const username = localStorage.getItem("username");
+  const username = localStorage.getItem("user");
   return (
     <div className="">
       <Navbar 
