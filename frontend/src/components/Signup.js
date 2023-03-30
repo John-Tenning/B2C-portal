@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link , useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import home from "../assets/homepage.jpg";
 import logo from "../assets/logo.jpg";
 import ContactUs from "./ContactUs";
@@ -7,7 +7,6 @@ import TextInput from "./Input";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import { fetchSignup } from "../API/calls";
-
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -48,9 +47,11 @@ const Signup = () => {
       toast.error("Password must contain atleast 1 number");
       return;
     }
-    console.log(
-      {username : username, password : password, role : selected ? "customer" : "corporate"}
-    )
+    console.log({
+      username: username,
+      password: password,
+      role: selected ? "customer" : "corporate",
+    });
     if (selected) {
       toast.promise(
         fetchSignup({
@@ -69,13 +70,13 @@ const Signup = () => {
           },
         }
       );
-    }else{
+    } else {
       toast.promise(
         fetchSignup({
           username: username,
           password: password,
           role: "corporate",
-        }) , 
+        }),
         {
           loading: "Registering...",
           success: (res) => {
@@ -85,15 +86,15 @@ const Signup = () => {
             return `Error: ${err.response.data.error}`;
           },
         }
-      )
+      );
     }
     navigate("/");
   };
 
   return (
-    <div className="">
-      <div className="flex w-screen overflow-hidden h-screen font-lato ">
-        <div className="w-[40%] flex-1 bg-white justify-center items-center">
+    <div className="flex-col">
+      <div className="lg:flex-row flex flex-col w-screen lg:overflow-hidden lg:h-screen font-lato font-bold">
+        <div className="lg:w-[40%] flex-1 lg:bg-white justify-center items-center bg-smoke">
           <button className="h-16 px-2 mt-2">
             <Link to="/">
               <img className="h-full w-auto" src={logo} alt="" />
@@ -158,7 +159,7 @@ const Signup = () => {
             </div>
             <div className="flex items-center justify-center mt-4">
               <p className="text-xs">
-                <Link to="/login">
+                <Link to="/">
                   Already Registerd ? {"  "}
                   <span className="text-dark underline">Log In</span>
                 </Link>
@@ -167,7 +168,7 @@ const Signup = () => {
           </div>
         </div>
         <div
-          className="w-[60%] flex-1.5 bg-smoke rounded-[36px] m-3"
+          className="lg:w-[60%] w-screen h-full bg-smoke lg:rounded-[36px] lg:m-3 mt-8"
           style={{
             backgroundImage: `url(${home})`,
             backgroundSize: "cover",

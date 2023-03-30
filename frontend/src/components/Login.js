@@ -38,9 +38,9 @@ const Login = () => {
   //   1 - Student
 
   return (
-    <div className="">
-      <div className="flex w-screen overflow-hidden h-screen font-lato font-bold">
-        <div className="w-[40%] flex-1 bg-white justify-center items-center">
+    <div className="flex-col">
+      <div className="lg:flex-row flex flex-col w-screen lg:overflow-hidden lg:h-screen font-lato font-bold">
+        <div className="lg:w-[40%] flex-1 lg:bg-white justify-center items-center bg-smoke ">
           <button className="h-16 px-2 mt-2">
             <Link to="/">
               <img className="h-full w-auto" src={logo} alt="" />
@@ -108,14 +108,15 @@ const Login = () => {
           </div>
         </div>
         <div
-          className="w-[60%] flex-1.5 bg-smoke rounded-[36px] m-3"
+          className="lg:w-[60%] bg-smoke lg:rounded-[36px] lg:m-3"
           style={{
             backgroundImage: `url(${home})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-        ></div>
+        >
+        </div>
       </div>
       <ContactUs />
     </div>
