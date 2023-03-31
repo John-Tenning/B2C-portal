@@ -10,7 +10,6 @@ import axios from "axios";
 
 export const Profile = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const username = localStorage.getItem("user");
 
   useEffect(() => {
@@ -18,9 +17,8 @@ export const Profile = () => {
       .get(`http://localhost:3002/api/users/name/${username}`)
       .then((res) => {
         console.log(res.data);
-        const user = res.data[0];
-        setName(user.name);
-        setEmail(user.email);
+        const user = res.data;
+        setName(user.username);
       })
       .catch((err) => {
         console.log(err);
