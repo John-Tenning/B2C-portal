@@ -31,6 +31,7 @@ router.post("/", async (req, res) => {
     await newService.save();
     res.status(201).json(newService);
   } catch (error) {
+    console.log(error);
     res.status(409).json({ message: error.message });
   }
 });
